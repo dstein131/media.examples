@@ -1,0 +1,27 @@
+.testBox {
+    background-color: lightblue;
+    width: 50%;
+    height: 50%;
+    border-top: 2px solid black;
+}
+
+/* here is where you change the css for print view. All screen CSS styling remains the same, so if you want the border to move form
+the top to the bottom, you need to remove the top border and add the bottom border instead. */
+
+@media print {
+    .testBox {
+        border-top: none;
+        border-bottom: 2px solid black;
+    }
+}
+
+/* additionally, you can use @media to change how the css displays based on the screen size.
+same rules apply as above, where the original styling remains and you need to edit or remove it case by case. 
+here we will use @media to change the background color to red when the screen is less than 600px wide. */
+
+@media screen and (max-width: 600px) {
+    .testBox {
+        background-color: red;
+    }
+}
+    
